@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a2c04a4-f3f6-4804-9ce2-72f61253ba71" name="Changes" comment="First commit. Tested for 1 item">
+    <list default="true" id="5a2c04a4-f3f6-4804-9ce2-72f61253ba71" name="Changes" comment="Added support for data lists">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -72,7 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1774824275360</updated>
       <workItem from="1774824276400" duration="1107000" />
-      <workItem from="1774868592200" duration="8765000" />
+      <workItem from="1774868592200" duration="22456000" />
     </task>
     <task id="LOCAL-00001" summary="First commit. Tested for 1 item">
       <option name="closed" value="true" />
@@ -82,7 +82,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774873878356</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added support for data lists">
+      <option name="closed" value="true" />
+      <created>1774877746861</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1774877746861</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,9 +98,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit. Tested for 1 item" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit. Tested for 1 item" />
+    <MESSAGE value="Added support for data lists" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added support for data lists" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Parser1$main.coverage" NAME="main Coverage Results" MODIFIED="1774877347377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Parser1$main.coverage" NAME="main Coverage Results" MODIFIED="1774891736665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
