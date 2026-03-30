@@ -26,14 +26,16 @@ def check_input_data(input_message, error_message, start_range, end_range, defau
 
         print(error_message)
 
-
+print("#" * 100)
 print("Enter search data")
 print("#" * 100)
-start_year = check_input_data("Minimum year of vehicle production (1900-2026): ", "Enter a valid year!", 1900, 2026,
-                              1900)
+
+start_year = check_input_data("Minimum year of vehicle production (1900-2026): ", "Enter a valid year!", 1900, 2026,1900)
 end_year = check_input_data("Maximum year of vehicle production (1900-2026): ", "Enter a valid year!", 1900, 2026, 2026)
 start_price = check_input_data("Minimum price (>0): ", "Enter a valid price!", 0, 100000, 1)
 end_price = check_input_data("Maximum price (1-100000000): ", "Enter a valid price!", 0, 100000000, 1)
+
+print("#" * 100)
 
 url_rio = ("https://auto.ria.com/search/?search_type=1&"
            "category=1&all[0].any[0]."
@@ -47,17 +49,14 @@ url_rio = ("https://auto.ria.com/search/?search_type=1&"
            "abroad=0&"
            "customs_cleared=1")
 
-headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-}
-
 
 def parse_rio(url, last_page=10):
     for page in range(1, last_page + 1):
         url = f"{url}&p={page}"
         print(f"Parsing page: {page}")
 
-        response = requests.get(url, headers=headers)
+        response = requests.get(url)
+
         if response.status_code != 200:
             break
 
@@ -76,13 +75,12 @@ def parse_rio(url, last_page=10):
         for item_name, item_price, item_link in zip(all_names, all_prices, all_links):
             data.append([item_name.text.strip(), item_price.text.strip(), "auto.ria.com" + item_link["href"]])
 
-        time.sleep(random.randint(1, 6))
+        time.sleep(random.randint(1, 6)) # delay to avoid blocking
+
     return data
 
 
-print("#" * 100)
-
-parse_rio(url_rio, 3)
+parse_rio(url_rio, 3) # parsing only three pages
 
 with open('data_output.csv', 'w', newline='', encoding='utf-8-sig') as file:
     writer = csv.writer(file)
